@@ -1,7 +1,7 @@
 body{
 	margin: 0;
 	font-family: Helvetica, Arial, sans-serif;
-	font-size: 17px;
+	font-size: 18px;
 	line-height: 30px;
 }
 
@@ -49,9 +49,36 @@ p{
 	font-family: 'Passion+One', cursive;
 }
 
+p span{
+	color: #32AA21;
+}
+
 li{
 	font-family: 'Passion+One', cursive;
+	counter-increment: li
 }
+
+/* color of ol and ul lists */
+ol {
+	list-style: none; counter-reset: li
+}
+
+li span::before {
+	content: counter(li); color: #32AA21;
+    display: inline-block; width: 1em;
+    margin-left: -1em;
+}
+
+li a::before {
+    content: "•"; color: #371284;
+    display: inline-block; width: 1em;
+    margin-left: -1em
+}
+
+ul{
+	list-style: none;
+}
+
 /* style de los links */
 a{
    color: #9D4C17 
@@ -85,4 +112,24 @@ p.caption{
 	color: #999999;
 	font-style: italic;
 	margin-top: 0;
+}
+img.size{
+	height: 200px;
+	width: 350px;
+	margin: 40px 25px;
+}
+ol.padding{
+	padding: 18px;
+}
+ul.padding{
+	padding: 0;
+}
+
+img.img-final{
+	margin:  20px 170px 0;
+}
+img.avatar{
+	width: 48px;
+	margin-top: 0;
+	margin-right: 20px;
 }
